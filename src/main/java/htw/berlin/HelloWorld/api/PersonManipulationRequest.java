@@ -1,12 +1,12 @@
 package htw.berlin.HelloWorld.api;
 
-public class PersonCreateRequest {
+public class PersonManipulationRequest {
 
     private String firstName;
     private String lastName;
     private String address;
 
-    public PersonCreateRequest(String firstName, String lastName, String address) {
+    public PersonManipulationRequest(String firstName, String lastName, String address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
