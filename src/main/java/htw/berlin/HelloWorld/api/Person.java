@@ -2,23 +2,23 @@ package htw.berlin.HelloWorld.api;
 
 public class Person {
 
-    private long id;
+    private Long id;
     private String firstName;
     private String lastName;
     private String address;
 
-    public Person(long id, String firstName, String lastName, String address) {
+    public Person(Long id, String firstName, String lastName, String address) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

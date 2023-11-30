@@ -7,16 +7,16 @@ public class PersonEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "id)")
-    private long id;
+    //@Column (name = "id")
+    private Long id;
 
-    @Column (name = "firstName)", nullable = false)
+    @Column (name = "firstName", nullable = false)
     private String firstName;
 
-    @Column (name = "lastName)", nullable = false)
+    @Column (name = "lastName", nullable = false)
     private String lastName;
 
-    @Column (name = "address)")
+    @Column (name = "address")
     private String address;
 
     public PersonEntity(String firstName, String lastName, String address) {
@@ -28,8 +28,12 @@ public class PersonEntity {
     protected PersonEntity() {
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getFirstName() {

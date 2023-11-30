@@ -12,6 +12,9 @@ public class PersonManipulationRequest {
         this.address = address;
     }
 
+    public PersonManipulationRequest() {
+    }
+
     public String getFirstName() {
         return firstName;
     }
