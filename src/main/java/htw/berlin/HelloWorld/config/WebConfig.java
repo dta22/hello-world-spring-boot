@@ -17,4 +17,5 @@ public class WebConfig implements WebMvcConfigurer {
                         " http://192.168.1.141:3000/"
                 );
     }
+
 }
