@@ -1,6 +1,9 @@
 package htw.berlin.HelloWorld.persistence;
 
-import javax.persistence.*;
+//import javax.persistence.*;
+import jakarta.persistence.*;
+
+//import javax.persistence.Entity;
 
 @Entity(name = "persons")
 public class PersonEntity {
@@ -59,4 +62,5 @@ public class PersonEntity {
     public void setAddress(String address) {
         this.address = address;
     }
+
 }

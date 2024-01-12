@@ -3,6 +3,7 @@ package htw.berlin.HelloWorld;
 import htw.berlin.HelloWorld.api.Person;
 import htw.berlin.HelloWorld.api.PersonManipulationRequest;
 import htw.berlin.HelloWorld.service.PersonService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -67,8 +68,7 @@ public class PersonRestController {
     }
 
     @PostMapping(path = "/api/v1/persons")
-    public ResponseEntity<Void> createPerson(@RequestBody PersonManipulationRequest request) throws URISyntaxException {
-        var person  = personService.create(request);
+    public ResponseEntity<Void> createPerson(@Valid @RequestBody PersonManipulationRequest request) throws URISyntaxException {        var person  = personService.create(request);
         URI uri = new URI("/api/v1/persons/" + person.getId());
         return ResponseEntity.created(uri).build();
     }
