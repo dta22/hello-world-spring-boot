@@ -10,6 +10,6 @@ LABEL org.name="dta22"
 #
 # Package stage
 #
-FROM eclipse-temurin:17-jdk-jammy
+FROM openjdk:17
 COPY --from=build /home/gradle/src/build/libs/HelloWorld-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
